@@ -1,0 +1,26 @@
+import React from 'react';
+
+interface LogoProps {
+    fill?: string;
+}
+
+export default function Logo({ fill = "#DDDDDD" }: LogoProps) {
+    return (
+        <svg className="w-full" width="100%" height="auto" viewBox="0 0 668 186" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <g>
+                <path fillRule="evenodd" clipRule="evenodd" d="M0 89.5973V0H89.3048V57.5214H57.3337V64.1427H89.3048V89.5973H31.9711V57.5214H25.3715V89.5973H0ZM25.3715 25.4546V32.0758H63.9333V25.4546H25.3715Z" fill={fill} />
+                <path d="M96.4492 0H185.754V25.452H121.821V32.0726H185.754V57.5246H121.821V64.1452H185.754V89.5973H96.4492V0Z" fill={fill} />
+                <path d="M192.898 0H218.27V64.1427H282.203V89.5973H192.898V0Z" fill={fill} />
+                <path d="M289.348 0H378.652V25.452H314.719V32.0726H378.652V57.5246H314.719V64.1452H378.652V89.5973H289.348V0Z" fill={fill} />
+                <path fillRule="evenodd" clipRule="evenodd" d="M385.797 0H475.102V89.5973H449.73V57.5214H411.168V89.5973H385.797V0ZM411.168 25.4546V32.0758H449.73V25.4546H411.168Z" fill={fill} />
+                <path d="M482.246 57.5214V0H571.551V25.4546H507.617V32.0758H571.551V89.5973H482.246V64.1427H546.179V57.5214H482.246Z" fill={fill} />
+                <path d="M578.695 0H668V25.452H604.067V32.0726H668V57.5246H604.067V64.1452H668V89.5973H578.695V0Z" fill={fill} />
+                <path d="M0 186V96.765H57.3337V160.908H63.9333V96.765H89.3048V186H31.9711V122.22H25.3715V186H0Z" fill={fill} />
+                <path fillRule="evenodd" clipRule="evenodd" d="M96.4492 96.765H185.754V186H96.4492V96.765ZM121.821 122.22V160.908H160.383V122.22H121.821Z" fill={fill} />
+                <path d="M192.907 122.22V96.765H282.203V122.22H250.235V186H224.866V122.22H192.898H192.907Z" fill={fill} />
+                <path d="M289.348 96.765H378.652V122.217H314.719V128.838H378.652V154.29H314.719V160.91H378.652V186H289.348V96.765Z" fill={fill} />
+                <path d="M385.797 154.286V96.765H475.102V122.22H411.168V128.841H475.102V186H385.797V160.908H449.73V154.286H385.797Z" fill={fill} />
+            </g>
+        </svg>
+    )
+}

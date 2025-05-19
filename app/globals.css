@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0F0F0F;
+    --background-secondary: #191919;
+    --background-tertiary: #222222;
+    --border: #202020;
+    --border-secondary: #282828;
+    --text-primary: #C3C3C3;
+    --text-secondary: #5E5E5E;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+.font-mono {
+  font-family: "Geist Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+}
