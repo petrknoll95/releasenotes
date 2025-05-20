@@ -17,9 +17,6 @@ export default async function AdminLayout({
     return redirect("/sign-in");
   }
 
-  // With the updated schema, any authenticated user can access admin
-  // No admin_users table check needed anymore
-
   return (
     <div className="bg-[var(--background)] min-h-screen">
       {children}

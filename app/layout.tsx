@@ -32,6 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/img/favicon.svg" sizes="32x32" />
+      </head>
       <body className="bg-[var(--background)] text-[var(--text-primary)]">
         <ThemeProvider
           attribute="class"
