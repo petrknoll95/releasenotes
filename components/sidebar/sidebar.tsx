@@ -85,9 +85,6 @@ export default function Sidebar() {
 
                 </div>
                 <Logo fill="#0F0F0F" />
-                <div className="flex justify-center py-2">
-                    <img src="/img/powered-by.svg" alt="Powered by" className="h-6 powered-by-logo" />
-                </div>
                 <div className="flex items-center justify-between gap-2 font-mono text-[12px] leading-[12px] font-medium uppercase text-[var(--text-secondary)]">
                     <span>Copyright © 2025 releasenotes.live</span>
                     <span>All rights reserved</span>

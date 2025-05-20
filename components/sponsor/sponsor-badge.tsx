@@ -24,7 +24,7 @@ export default function SponsorBadge({ sponsor }: { sponsor: Sponsor }) {
             alt={sponsor.name}
             width={240}
             height={240}
-            className="object-contain max-h-32 animate-spin-clockwise-continuous"
+            className="object-contain max-h-32"
             onError={handleImageError}
           />
         ) : (
