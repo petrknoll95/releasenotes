@@ -37,8 +37,8 @@ export default function ShowLink({ icon, fill, href, status }: ShowLinkProps) {
                         <path d="M4 0.287109V4.28711M4 4.28711V8.28711M4 4.28711H8M4 4.28711H0" stroke="#282828" />
                     </svg>
                 </div>
-                <div className="absolute bottom-0 left-0 p-2 flex items-center justify-center bg-[var(--background-tertiary)]">
-                    <span className="text-[var(--text-secondary)] font-mono text-[12px] font-medium leading-[12px] uppercase">
+                <div className="absolute bottom-0 left-0 p-[4px] flex items-center justify-center bg-[var(--background-tertiary)]">
+                    <span className="text-[var(--text-secondary)] font-mono text-[10px] font-medium leading-[8px] uppercase">
                         <span>
                             Coming soon
                         </span>

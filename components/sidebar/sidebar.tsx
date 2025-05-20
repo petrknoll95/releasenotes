@@ -41,18 +41,18 @@ export default function Sidebar() {
                         <div className="grid grid-cols-[1fr_2fr] bg-[var(--background-tertiary)]">
                         </div>
                         <div className="grid grid-cols-[repeat(3,1fr)] md:grid-cols-1 md:grid-rows-[repeat(3,1fr)] gap-[8px]">
-                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 hover:p-1">
-                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-4">
+                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 lg:hover:p-1">
+                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-2">
                                     <Icons.IconX fill="#DDDDDD" />
                                 </div>
                             </a>
-                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 hover:p-1">
-                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-4">
+                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 lg:hover:p-1">
+                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-2">
                                     <Icons.IconYt fill="#DDDDDD" />
                                 </div>
                             </a>
-                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 hover:p-1">
-                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-4">
+                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 lg:hover:p-1">
+                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-2">
                                     <Icons.IconLi fill="#DDDDDD" />
                                 </div>
                             </a>
@@ -78,18 +78,18 @@ export default function Sidebar() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-[80px_1fr] gap-[8px]">
                         <div className="grid grid-cols-[repeat(3,1fr)] md:grid-cols-1 md:grid-rows-[repeat(3,1fr)] gap-[8px]">
-                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 hover:p-1">
-                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-4">
+                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 lg:hover:p-1">
+                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-2">
                                     <Icons.IconX fill="#DDDDDD" />
                                 </div>
                             </a>
-                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 hover:p-1">
-                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-4">
+                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 lg:hover:p-1">
+                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-2">
                                     <Icons.IconYt fill="#DDDDDD" />
                                 </div>
                             </a>
-                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 hover:p-1">
-                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-4">
+                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 lg:hover:p-1">
+                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-2">
                                     <Icons.IconLi fill="#DDDDDD" />
                                 </div>
                             </a>
@@ -99,7 +99,7 @@ export default function Sidebar() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col items-stretch gap-6 p-6">
+            <div className="flex flex-col items-stretch gap-6 p-3 md:p-4 lg:p-5 xl:p-6">
                 <div className="flex flex-col gap-1">
                     <a href="mailto:hello@releasenotes.live" className="text-[var(--text-primary)] font-mono text-[12px] font-medium leading-[12px] uppercase">hello@releasenotes.live</a>
                     <span className="text-[var(--text-secondary)] font-mono text-[12px] font-medium leading-[12px] uppercase">Sponsorship inquiries</span>
