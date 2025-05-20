@@ -13,7 +13,7 @@ export default function NewsletterForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full gap-[8px]">
+    <form onSubmit={handleSubmit} className="flex flex-col md:flex-row w-full gap-[8px]">
       <div className="flex-1 bg-[var(--background)] p-6 flex items-center">
         <input
           type="email"

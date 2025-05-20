@@ -12,7 +12,7 @@ export default async function Home() {
   } = await supabase.auth.getUser();
 
   return (
-    <div className="grid grid-cols-[1fr] md:grid-cols-[40%_1fr]">
+    <div className="w-full min-h-screen flex flex-row flex-wrap">
       <Sidebar />
       <Main />
     </div>
