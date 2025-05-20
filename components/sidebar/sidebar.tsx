@@ -34,6 +34,18 @@ export default function Sidebar() {
             <div className="flex flex-col gap-6 p-3 md:p-4 lg:p-5 xl:p-6 border-b border-[var(--border-secondary)]">
                 <img src="/img/headline-hosts.svg" alt="hosts" className="w-full" />
                 <div className="flex flex-col gap-2">
+                    {/* Hunter Hammonds */}
+                    <HostProfile 
+                        firstName="Hunter"
+                        lastName="Hammonds"
+                        image="/img/profile-hunter.gif"
+                        description="Runs Assembly, a venture studio that builds design-driven products and companies."
+                        linkX={[{ href: "https://x.com/_hunterhammonds" }]}
+                        linkYt={[{ href: "https://www.youtube.com/@Hunterhammonds" }]}
+                        linkLi={[{ href: "https://www.linkedin.com/in/hunterhammonds/" }]}
+                        layoutOuter="md:grid-cols-[80px_1fr]"
+                    />
+
                     {/* Tommy Geoco */}
                     <HostProfile 
                         firstName="Tommy"
@@ -64,18 +76,6 @@ export default function Sidebar() {
                             <span>He is not actually negative</span>
                         </span>
                     </div>
-                    
-                    {/* Hunter Hammonds */}
-                    <HostProfile 
-                        firstName="Hunter"
-                        lastName="Hammonds"
-                        image="/img/profile-hunter.gif"
-                        description="Runs Assembly, a venture studio that builds design-driven products and companies."
-                        linkX={[{ href: "https://x.com/_hunterhammonds" }]}
-                        linkYt={[{ href: "https://www.youtube.com/@Hunterhammonds" }]}
-                        linkLi={[{ href: "https://www.linkedin.com/in/hunterhammonds/" }]}
-                        layoutOuter="md:grid-cols-[80px_1fr]"
-                    />
                 </div>
             </div>
             <div className="flex flex-col items-stretch gap-6 p-3 md:p-4 lg:p-5 xl:p-6">
