@@ -60,3 +60,27 @@
 .scrollbar-gutter-stable {
   scrollbar-gutter: stable;
 }
+
+/* Continuous Clockwise Spin Animation */
+@keyframes spin-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-clockwise-continuous {
+  animation: spin-clockwise 2s linear infinite;
+}
+
+/* Flashing Animation for LIVE badge */
+@keyframes flash-opacity {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-flash {
+  animation: flash-opacity 1.5s infinite;
+}

@@ -80,11 +80,14 @@ export default function Sidebar() {
             </div>
             <div className="flex flex-col items-stretch gap-6 p-3 md:p-4 lg:p-5 xl:p-6">
                 <div className="flex flex-col gap-1">
-                    <a href="mailto:hello@releasenotes.live" className="text-[var(--text-primary)] font-mono text-[12px] font-medium leading-[12px] uppercase">hello@releasenotes.live</a>
+                    <a href="mailto:hunter@assembly.ventures" className="text-[var(--text-primary)] font-mono text-[12px] font-medium leading-[12px] uppercase">Hunter Hammonds</a>
                     <span className="text-[var(--text-secondary)] font-mono text-[12px] font-medium leading-[12px] uppercase">Sponsorship inquiries</span>
 
                 </div>
                 <Logo fill="#0F0F0F" />
+                <div className="flex justify-center py-2">
+                    <img src="/img/powered-by.svg" alt="Powered by" className="h-6 powered-by-logo animate-spin-clockwise-continuous" />
+                </div>
                 <div className="flex items-center justify-between gap-2 font-mono text-[12px] leading-[12px] font-medium uppercase text-[var(--text-secondary)]">
                     <span>Copyright © 2025 releasenotes.live</span>
                     <span>All rights reserved</span>

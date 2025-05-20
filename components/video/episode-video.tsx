@@ -210,9 +210,14 @@ export default function EpisodeVideo() {
       <div className="w-full p-3 md:p-4 lg:p-5 xl:p-6 border-b border-[var(--border-secondary)]">
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center sm:justify-between gap-2">
           <div className="flex flex-row items-center gap-2">
-            {episode.is_live && (
-              <span className="bg-red-600 text-white px-1 py-1 text-[12px] leading-[12px] font-mono font-medium uppercase inline-block">LIVE</span>
-            )}
+            <span 
+              className={`
+                text-white px-1 py-1 text-[12px] leading-[12px] font-mono font-medium uppercase inline-block
+                ${episode.is_live ? 'bg-red-600 animate-flash' : 'bg-gray-600'}
+              `}
+            >
+              {episode.is_live ? 'LIVE' : 'RECENT EPISODE'}
+            </span>
             <h2 className="min-w-[0px] font-mono font-medium uppercase text-[12px] leading-none text-[var(--text-primary)] truncate grow">{episode.title}</h2>
             <div className="font-mono font-medium uppercase text-[12px] leading-none text-[var(--text-secondary)] shrink-0">
               {new Date(episode.air_date).toLocaleDateString('en-US', {
