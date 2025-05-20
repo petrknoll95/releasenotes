@@ -1,5 +1,5 @@
 import { createClient } from "@/utils/supabase/server";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 interface Guest {
   id: string;
@@ -11,11 +11,11 @@ interface Guest {
 }
 
 export async function GET(
-  request: Request,
-  { params }: { params: { id: string } }
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const episodeId = params.id;
+    const { id: episodeId } = await params;
     const supabase = await createClient();
     
     // Fetch the specific episode by ID

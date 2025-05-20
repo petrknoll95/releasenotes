@@ -22,9 +22,9 @@ export default function SponsorBadge({ sponsor }: { sponsor: Sponsor }) {
           <Image
             src={sponsor.logo_url}
             alt={sponsor.name}
-            width={160}
-            height={160}
-            className="object-contain max-h-20"
+            width={240}
+            height={240}
+            className="object-contain max-h-32"
             onError={handleImageError}
           />
         ) : (
