@@ -46,6 +46,25 @@ export default function Sidebar() {
                         layoutOuter="md:grid-cols-[80px_1fr]"
                     />
 
+                    <div className="flex flex-row items-center justify-between text-[var(--text-secondary)] font-mono text-[12px] font-medium leading-[12px] uppercase">
+                        <span className="flex flex-row items-center gap-[8px]">
+                            <span>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 5.88225L6 10M6 10L2 5.88225M6 10V2" stroke="#5E5E5E" />
+                                </svg>
+                            </span>
+                            <span>He is actually unhinged</span>
+                        </span>
+                        <span className="flex flex-row items-center gap-[8px]">
+                            <span>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.11775L6 2M6 2L2 6.11775M6 2V10" stroke="#5E5E5E" />
+                                </svg>
+                            </span>
+                            <span>He is not actually negative</span>
+                        </span>
+                    </div>
+                    
                     {/* Tommy Geoco */}
                     <HostProfile 
                         firstName="Tommy"
@@ -57,25 +76,6 @@ export default function Sidebar() {
                         linkLi={[{ href: "https://www.linkedin.com/in/tommygeoco/" }]}
                         layoutOuter="md:grid-cols-[1fr_80px]"
                     />
-                    
-                    <div className="flex flex-row items-center justify-between text-[var(--text-secondary)] font-mono text-[12px] font-medium leading-[12px] uppercase">
-                        <span className="flex flex-row items-center gap-[8px]">
-                            <span>
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 6.11775L6 2M6 2L2 6.11775M6 2V10" stroke="#5E5E5E" />
-                                </svg>
-                            </span>
-                            <span>He is actually unhinged</span>
-                        </span>
-                        <span className="flex flex-row items-center gap-[8px]">
-                            <span>
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 5.88225L6 10M6 10L2 5.88225M6 10V2" stroke="#5E5E5E" />
-                                </svg>
-                            </span>
-                            <span>He is not actually negative</span>
-                        </span>
-                    </div>
                 </div>
             </div>
             <div className="flex flex-col items-stretch gap-6 p-3 md:p-4 lg:p-5 xl:p-6">

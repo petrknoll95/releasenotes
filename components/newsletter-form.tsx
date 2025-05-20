@@ -75,7 +75,7 @@ export default function NewsletterForm() {
         </div>
       ) : (
         <div className="flex-1 flex items-center h-[56px]"> {/* Ensure consistent height */} 
-          <p className="font-mono text-green-500 text-sm">You have subscribed!</p>
+          <p className="font-mono text-[var(--text-primary)] text-sm">Hell yeah! You're subscribed!</p>
         </div>
       )}
       <button 
