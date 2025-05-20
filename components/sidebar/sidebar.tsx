@@ -1,11 +1,68 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Icons } from '@/components/icons/icons';
 import Logo from '@/components/logo/logo';
 import ShowLink from '@/components/show-link';
 import NewsletterForm from '@/components/newsletter-form';
 import HostProfile from '@/components/hosts/host-profile';
 
+const HunterProfile = () => (
+  <HostProfile 
+    firstName="Hunter"
+    lastName="Hammonds"
+    image="/img/profile-hunter.gif"
+    description="Runs Assembly, a venture studio that builds design-driven products and companies."
+    linkX={[{ href: "https://x.com/_hunterhammonds" }]}
+    linkYt={[{ href: "https://www.youtube.com/@Hunterhammonds" }]}
+    linkLi={[{ href: "https://www.linkedin.com/in/hunterhammonds/" }]}
+    layoutOuter="md:grid-cols-[80px_1fr]"
+  />
+);
+
+const TommyProfile = () => (
+  <HostProfile 
+    firstName="Tommy"
+    lastName="Geoco"
+    image="/img/profile-tommy.gif"
+    description="Runs UX Tools, the insider source of high-signal design trends & design tool data."
+    linkX={[{ href: "https://x.com/designertom_" }]}
+    linkYt={[{ href: "https://www.youtube.com/@designertom" }]}
+    linkLi={[{ href: "https://www.linkedin.com/in/tommygeoco/" }]}
+    layoutOuter="md:grid-cols-[1fr_80px]"
+  />
+);
+
+const HostCommentary = () => (
+  <div className="flex flex-row items-center justify-between text-[var(--text-secondary)] font-mono text-[12px] font-medium leading-[12px] uppercase">
+    <span className="flex flex-row items-center gap-[8px]">
+      <span>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* Arrow pointing down (for person above) */}
+          <path d="M10 5.88225L6 10M6 10L2 5.88225M6 10V2" stroke="#5E5E5E" />
+        </svg>
+      </span>
+      <span>He is actually unhinged</span>
+    </span>
+    <span className="flex flex-row items-center gap-[8px]">
+      <span>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* Arrow pointing up (for person below) */}
+          <path d="M10 6.11775L6 2M6 2L2 6.11775M6 2V10" stroke="#5E5E5E" />
+        </svg>
+      </span>
+      <span>He is not actually negative</span>
+    </span>
+  </div>
+);
+
 export default function Sidebar() {
+  const [renderHunterFirst, setRenderHunterFirst] = useState(true); // Default order
+  const [isClientMounted, setIsClientMounted] = useState(false);
+
+  useEffect(() => {
+    setIsClientMounted(true);
+    setRenderHunterFirst(Math.random() < 0.5);
+  }, []); // Empty dependency array ensures this runs only once on mount
+
     return (
         <div className="order-2 lg:order-1 flex-grow w-full lg:w-2/5 lg:max-w-[720px] md:h-screen bg-[var(--background-secondary)] overflow-y-auto lg:border-r border-[var(--border-secondary)]">
             <div className="hidden lg:flex flex-col gap-6 p-3 md:p-4 lg:p-5 xl:p-6 border-b border-[var(--border-secondary)]">
@@ -15,7 +72,7 @@ export default function Sidebar() {
                 <img src="/img/headline-subscribe.svg" alt="subscribe" className="w-full" />
                 <div className="flex flex-col gap-0 font-mono text-[12px] font-medium leading-[16px] uppercase">
                     <span className="text-[var(--text-primary)]">Don't miss an episode</span>
-                    <span className="text-[var(--text-secondary)]">We go live twice a week on Tuesdays and Fridays at 1pm PST</span>
+                    <span className="text-[var(--text-secondary)]">We go live twice a week on Tuesdays and Fridays at 1pm EST</span>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-[repeat(4,1fr)] gap-[8px]">
                     <ShowLink icon="IconYt" fill="#DDDDDD" href="https://www.youtube.com/@ReleaseNotesLive" status="active" />
@@ -34,48 +91,26 @@ export default function Sidebar() {
             <div className="flex flex-col gap-6 p-3 md:p-4 lg:p-5 xl:p-6 border-b border-[var(--border-secondary)]">
                 <img src="/img/headline-hosts.svg" alt="hosts" className="w-full" />
                 <div className="flex flex-col gap-2">
-                    {/* Hunter Hammonds */}
-                    <HostProfile 
-                        firstName="Hunter"
-                        lastName="Hammonds"
-                        image="/img/profile-hunter.gif"
-                        description="Runs Assembly, a venture studio that builds design-driven products and companies."
-                        linkX={[{ href: "https://x.com/_hunterhammonds" }]}
-                        linkYt={[{ href: "https://www.youtube.com/@Hunterhammonds" }]}
-                        linkLi={[{ href: "https://www.linkedin.com/in/hunterhammonds/" }]}
-                        layoutOuter="md:grid-cols-[80px_1fr]"
-                    />
-
-                    <div className="flex flex-row items-center justify-between text-[var(--text-secondary)] font-mono text-[12px] font-medium leading-[12px] uppercase">
-                        <span className="flex flex-row items-center gap-[8px]">
-                            <span>
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 5.88225L6 10M6 10L2 5.88225M6 10V2" stroke="#5E5E5E" />
-                                </svg>
-                            </span>
-                            <span>He is actually unhinged</span>
-                        </span>
-                        <span className="flex flex-row items-center gap-[8px]">
-                            <span>
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 6.11775L6 2M6 2L2 6.11775M6 2V10" stroke="#5E5E5E" />
-                                </svg>
-                            </span>
-                            <span>He is not actually negative</span>
-                        </span>
-                    </div>
-                    
-                    {/* Tommy Geoco */}
-                    <HostProfile 
-                        firstName="Tommy"
-                        lastName="Geoco"
-                        image="/img/profile-tommy.gif"
-                        description="Runs UX Tools, the insider source of high-signal design trends & design tool data."
-                        linkX={[{ href: "https://x.com/designertom_" }]}
-                        linkYt={[{ href: "https://www.youtube.com/@designertom" }]}
-                        linkLi={[{ href: "https://www.linkedin.com/in/tommygeoco/" }]}
-                        layoutOuter="md:grid-cols-[1fr_80px]"
-                    />
+                  {!isClientMounted ? (
+                    // Default order for initial/server render
+                    <>
+                      <HunterProfile />
+                      <HostCommentary />
+                      <TommyProfile />
+                    </>
+                  ) : renderHunterFirst ? (
+                    <>
+                      <HunterProfile />
+                      <HostCommentary />
+                      <TommyProfile />
+                    </>
+                  ) : (
+                    <>
+                      <TommyProfile />
+                      <HostCommentary />
+                      <HunterProfile />
+                    </>
+                  )}
                 </div>
             </div>
             <div className="flex flex-col items-stretch gap-6 p-3 md:p-4 lg:p-5 xl:p-6">
