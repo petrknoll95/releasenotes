@@ -10,7 +10,19 @@ const defaultUrl = process.env.VERCEL_URL
 export const metadata = {
   metadataBase: new URL(defaultUrl),
   title: "Release Notes",
-  description: "Video podcast featuring the latest in developer tools and technologies",
+  description: "Internet's most chaotic show for designers, engineers, and AI builders.",
+  openGraph: {
+    title: "Release Notes",
+    description: "Internet's most chaotic show for designers, engineers, and AI builders.",
+    images: ['/img/opengraph.png'],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Release Notes",
+    description: "Internet's most chaotic show for designers, engineers, and AI builders.",
+    images: ['/img/twitter.png'],
+  }
 };
 
 export default function RootLayout({
@@ -20,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-background text-foreground">
+      <body className="bg-[var(--background)] text-[var(--text-primary)]">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

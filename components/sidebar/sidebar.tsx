@@ -3,15 +3,12 @@ import { Icons } from '@/components/icons/icons';
 import Logo from '@/components/logo/logo';
 import ShowLink from '@/components/show-link';
 import NewsletterForm from '@/components/newsletter-form';
+import HostProfile from '@/components/hosts/host-profile';
 
 export default function Sidebar() {
     return (
-        <div className="flex-grow w-full lg:w-2/5 md:h-screen bg-[var(--background-secondary)] overflow-y-auto border-r border-[var(--border-secondary)]">
-            <div className="flex flex-col gap-6 p-3 md:p-4 lg:p-5 xl:p-6 border-b border-[var(--border-secondary)]">
-                <div className="flex items-center justify-between gap-2 font-mono text-[12px] font-medium leading-[10px] uppercase">
-                    <span>releasenotes.live</span>
-                    <span className="hidden md:block">releasenotes.live</span>
-                </div>
+        <div className="order-2 lg:order-1 flex-grow w-full lg:w-2/5 lg:max-w-[720px] md:h-screen bg-[var(--background-secondary)] overflow-y-auto lg:border-r border-[var(--border-secondary)]">
+            <div className="hidden lg:flex flex-col gap-6 p-3 md:p-4 lg:p-5 xl:p-6 border-b border-[var(--border-secondary)]">
                 <Logo fill="#DDDDDD" />
             </div>
             <div className="flex flex-col gap-6 p-3 md:p-4 lg:p-5 xl:p-6 border-b border-[var(--border-secondary)]">
@@ -21,8 +18,8 @@ export default function Sidebar() {
                     <span className="text-[var(--text-secondary)]">We go live twice a week on Tuesdays and Fridays at 1pm PST</span>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-[repeat(4,1fr)] gap-[8px]">
-                    <ShowLink icon="IconYt" fill="#DDDDDD" href="#" status="active" />
-                    <ShowLink icon="IconX" fill="#DDDDDD" href="#" status="active" />
+                    <ShowLink icon="IconYt" fill="#DDDDDD" href="https://www.youtube.com/@ReleaseNotesLive" status="active" />
+                    <ShowLink icon="IconX" fill="#DDDDDD" href="https://x.com/releasenotespod" status="active" />
                     <ShowLink icon="IconSpotify" fill="#DDDDDD" href="#" status="inactive" />
                     <ShowLink icon="IconApplePodcasts" fill="#DDDDDD" href="#" status="inactive" />
                 </div>
@@ -37,27 +34,18 @@ export default function Sidebar() {
             <div className="flex flex-col gap-6 p-3 md:p-4 lg:p-5 xl:p-6 border-b border-[var(--border-secondary)]">
                 <img src="/img/headline-hosts.svg" alt="hosts" className="w-full" />
                 <div className="flex flex-col gap-2">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_80px] gap-[8px]">
-                        <div className="grid grid-cols-[1fr_2fr] bg-[var(--background-tertiary)]">
-                        </div>
-                        <div className="grid grid-cols-[repeat(3,1fr)] md:grid-cols-1 md:grid-rows-[repeat(3,1fr)] gap-[8px]">
-                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 lg:hover:p-1">
-                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-2">
-                                    <Icons.IconX fill="#DDDDDD" />
-                                </div>
-                            </a>
-                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 lg:hover:p-1">
-                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-2">
-                                    <Icons.IconYt fill="#DDDDDD" />
-                                </div>
-                            </a>
-                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 lg:hover:p-1">
-                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-2">
-                                    <Icons.IconLi fill="#DDDDDD" />
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    {/* Tommy Geoco */}
+                    <HostProfile 
+                        firstName="Tommy"
+                        lastName="Geoco"
+                        image="/img/profile-tommy.gif"
+                        description="Runs UX Tools, the insider source of high-signal design trends & design tool data."
+                        linkX={[{ href: "https://x.com/designertom_" }]}
+                        linkYt={[{ href: "https://www.youtube.com/@designertom" }]}
+                        linkLi={[{ href: "https://www.linkedin.com/in/tommygeoco/" }]}
+                        layoutOuter="md:grid-cols-[1fr_80px]"
+                    />
+                    
                     <div className="flex flex-row items-center justify-between text-[var(--text-secondary)] font-mono text-[12px] font-medium leading-[12px] uppercase">
                         <span className="flex flex-row items-center gap-[8px]">
                             <span>
@@ -76,27 +64,18 @@ export default function Sidebar() {
                             <span>He is not actually negative</span>
                         </span>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-[80px_1fr] gap-[8px]">
-                        <div className="grid grid-cols-[repeat(3,1fr)] md:grid-cols-1 md:grid-rows-[repeat(3,1fr)] gap-[8px]">
-                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 lg:hover:p-1">
-                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-2">
-                                    <Icons.IconX fill="#DDDDDD" />
-                                </div>
-                            </a>
-                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 lg:hover:p-1">
-                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-2">
-                                    <Icons.IconYt fill="#DDDDDD" />
-                                </div>
-                            </a>
-                            <a href="#" className="w-full h-full md:aspect-square flex items-center justify-center transition-all duration-200 lg:hover:p-1">
-                                <div className="w-full h-full flex items-center justify-center bg-[var(--background-tertiary)] p-2">
-                                    <Icons.IconLi fill="#DDDDDD" />
-                                </div>
-                            </a>
-                        </div>
-                        <div className="grid grid-cols-[1fr_2fr] bg-[var(--background-tertiary)]">
-                        </div>
-                    </div>
+                    
+                    {/* Hunter Hammonds */}
+                    <HostProfile 
+                        firstName="Hunter"
+                        lastName="Hammonds"
+                        image="/img/profile-hunter.gif"
+                        description="Runs Assembly, a venture studio that builds design-driven products and companies."
+                        linkX={[{ href: "https://x.com/_hunterhammonds" }]}
+                        linkYt={[{ href: "https://www.youtube.com/@Hunterhammonds" }]}
+                        linkLi={[{ href: "https://www.linkedin.com/in/hunterhammonds/" }]}
+                        layoutOuter="md:grid-cols-[80px_1fr]"
+                    />
                 </div>
             </div>
             <div className="flex flex-col items-stretch gap-6 p-3 md:p-4 lg:p-5 xl:p-6">

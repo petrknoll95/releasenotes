@@ -18,9 +18,9 @@ export default async function AuthButton() {
   // Only show sign out button if user is logged in
   return user ? (
     <div className="flex items-center gap-4">
-      <span className="text-sm">Signed in as {user.email}</span>
+      <span className="text-primary font-mono font-medium uppercase text-[12px] leading-none">Signed in as {user.email}</span>
       <form action={signOutAction}>
-        <Button type="submit" variant={"outline"} size="sm">
+        <Button type="submit" className="bg-[color-mix(in_srgb,#ffffff_10%,transparent)] hover:bg-[color-mix(in_srgb,#ffffff_20%,transparent)] text-primary font-mono font-medium uppercase text-[12px] leading-none">
           Sign out
         </Button>
       </form>

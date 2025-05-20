@@ -1,0 +1,25 @@
+import React from 'react';
+
+interface HeadlineSponsorProps {
+    fill: string;
+    className?: string;
+}
+
+export default function HeadlineSponsor({ fill, className }: HeadlineSponsorProps) {
+    return (
+        <div className={className}>
+            <svg viewBox="0 0 352 36" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+<path fillRule="evenodd" clipRule="evenodd" d="M35.873 23.0312H10.1914V36H0V0H35.873V23.0312ZM10.1914 12.8408H25.6816V10.1914H10.1914V12.8408Z" fill={fill}/>
+<path fillRule="evenodd" clipRule="evenodd" d="M73.9873 36H38.1143V0H73.9873V36ZM48.3057 25.6807H63.7959V10.1914H48.3057V25.6807Z" fill={fill}/>
+<path d="M86.4199 25.6807H89.0693V0H99.2607V25.6807H101.91V0H112.102V36H76.2295V0H86.4199V25.6807Z" fill={fill}/>
+<path d="M150.217 10.1914H124.535V12.8408H150.217V23.0312H124.535V25.6807H150.217V36H114.344V0H150.217V10.1914Z" fill={fill}/>
+<path fillRule="evenodd" clipRule="evenodd" d="M188.331 23.0312H175.49V25.6807H188.331V36H165.299V23.0312H162.649V36H152.459V0H188.331V23.0312ZM162.649 12.8408H178.141V10.1914H162.649V12.8408Z" fill={fill}/>
+<path d="M226.446 10.1914H200.765V12.8408H226.446V23.0312H200.765V25.6807H226.446V36H190.573V0H226.446V10.1914Z" fill={fill}/>
+<path d="M251.589 10.1914H238.821V25.6807H254.427V12.8408H264.561V36H228.688V0H251.589V10.1914Z" fill={fill}/>
+<path fillRule="evenodd" clipRule="evenodd" d="M313.886 36H278.013V0H313.886V36ZM288.204 25.6807H303.694V23.0312H288.204V25.6807ZM288.204 12.8408H303.694V10.1914H288.204V12.8408Z" fill={fill}/>
+<path d="M326.318 12.8408H341.81V0H352V23.0312H339.159V36H328.968V23.0312H316.127V0H326.318V12.8408Z" fill={fill}/>
+</svg>
+
+        </div>
+    )
+}

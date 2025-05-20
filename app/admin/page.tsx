@@ -3,7 +3,6 @@ import AuthButton from "@/components/auth-button";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import Sidebar from "@/components/sidebar/sidebar";
 
 export default async function AdminPage() {
   const supabase = await createClient();
@@ -16,22 +15,11 @@ export default async function AdminPage() {
     return redirect("/sign-in");
   }
 
-  // Check if user is in admin_users table
-  const { data: adminData } = await supabase
-    .from('admin_users')
-    .select('role')
-    .eq('id', user.id)
-    .single();
-    
-  // Only allow access to admins and editors
-  if (!adminData || !['admin', 'editor'].includes(adminData.role)) {
-    return redirect("/");
-  }
+  // With the updated schema, any authenticated user can access admin
+  // No admin_users table check needed anymore
 
   return (
     <div className="flex w-full h-screen">
-      <Sidebar />
-      
       <div className="flex-1 p-8 overflow-y-auto">
         <div className="max-w-5xl mx-auto">
           <div className="flex justify-between items-center mb-10">
@@ -39,36 +27,19 @@ export default async function AdminPage() {
             <AuthButton />
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            <div className="border rounded-lg p-6">
-              <h2 className="text-xl font-semibold mb-4">Content Management</h2>
-              <div className="space-y-2">
-                <Button asChild variant="outline" className="w-full justify-start">
-                  <Link href="/admin/episodes">Manage Episodes</Link>
-                </Button>
-                <Button asChild variant="outline" className="w-full justify-start">
-                  <Link href="/admin/guests">Manage Guests</Link>
-                </Button>
-                <Button asChild variant="outline" className="w-full justify-start">
-                  <Link href="/admin/sponsors">Manage Sponsors</Link>
-                </Button>
-              </div>
+          {/* Admin Tools */}
+          <div className="mb-4">
+            <div className="space-y-2">
+              <Button asChild className="w-full p-12 bg-[#DDDDDD] hover:bg-[#BBBBBB] flex justify-start items-center text-mono font-medium uppercase text-[12px] leading-none text-[var(--background)]">
+                <Link href="/admin/episodes">Manage Episodes</Link>
+              </Button>
+              <Button asChild className="w-full p-12 bg-[#DDDDDD] hover:bg-[#BBBBBB] flex justify-start items-center text-mono font-medium uppercase text-[12px] leading-none text-[var(--background)]">
+                <Link href="/admin/guests">Manage Guests</Link>
+              </Button>
+              <Button asChild className="w-full p-12 bg-[#DDDDDD] hover:bg-[#BBBBBB] flex justify-start items-center text-mono font-medium uppercase text-[12px] leading-none text-[var(--background)]">
+                <Link href="/admin/sponsors">Manage Sponsors</Link>
+              </Button>
             </div>
-            
-            <div className="border rounded-lg p-6">
-              <h2 className="text-xl font-semibold mb-4">User Management</h2>
-              <div className="space-y-2">
-                <Button asChild variant="outline" className="w-full justify-start">
-                  <Link href="/admin/users">Manage Admin Users</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-6">
-            <Button asChild variant="outline">
-              <Link href="/">Back to site</Link>
-            </Button>
           </div>
         </div>
       </div>
